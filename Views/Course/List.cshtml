@@ -1,0 +1,30 @@
+@model List<Course>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body style="background-color: #758876"> 
+    <head>Course Index Page</head>
+
+    <p>
+
+       @foreach(var kursWithNames in Model){
+        <div>
+            <h2>
+                @kursWithNames.Title
+            </h2>
+            <p>
+                @kursWithNames.Description
+            </p>
+            <img src="~/img/@kursWithNames.Image" width="600px" alt="">
+        </div>
+       }
+
+    </p>
+
+</body>
+</html>
